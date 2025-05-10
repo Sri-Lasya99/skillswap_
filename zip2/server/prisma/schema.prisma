@@ -1,0 +1,14 @@
+// prisma/schema.prisma
+
+model User {
+  user_id        Int      @id @default(autoincrement()) // Unique identifier for each user
+  age            Int      // User's age
+  gender         String   // User's gender (Male, Female, etc.)
+  cities         String   // City where the user is based
+  skilled        String   // Skills the user possesses (can be a comma-separated string)
+  interest       String   // User's interests (can be a comma-separated string)
+  points         Int      // User's total points
+  time_total     Int      // Total time spent on the platform (in minutes)
+  logins_week    Int      // Logins per week
+  highest_streak Int      // Highest streak of logins
+}
